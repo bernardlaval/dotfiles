@@ -1,2 +1,3 @@
+# In vim set a black bar at 50 and 80 to help while writing commit msg
 execute "set colorcolumn=50,80"
 execute "highlight ColorColumn ctermbg=0 guibg=lightgrey" 

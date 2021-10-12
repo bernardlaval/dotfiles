@@ -1,1 +1,2 @@
+#bind the key 9 to the following action: copy the commit number selected
 bind generic 9 !@sh -c "git rev-parse --short %(commit) | awk 1 ORS=' ' | pbcopy"

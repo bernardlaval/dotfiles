@@ -27,7 +27,7 @@ setopt HIST_IGNORE_DUPS
 setopt EXTENDED_HISTORY   
 
 # HSTR configuration
-alias hh=hstr                    # hh to be alias for hstr
+alias hh=hstr                    # hh to be alias for hstr (installed from brew install hstr)
 export HISTFILE=~/.zsh_history  # ensure history file visibility
 export HSTR_CONFIG=hicolor        # get more colors
 #bindkey -s "\C-r" "\eqhstr\n"     # bind hstr to Ctrl-r (for Vi mode check doc)
@@ -51,7 +51,7 @@ fi
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10k" # powerlevel10k repo contains a lot of color themes for the terminal
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(kubecontext time)
@@ -76,7 +76,7 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{black}%K{yellow}%} $user_symbo
 # eval $(minikube docker-env)
 
 # Go development
-export GOPATH="${HOME}/.go"
+export GOPATH="${HOME}/go"
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 test -d "${GOPATH}" || mkdir "${GOPATH}"
@@ -97,8 +97,8 @@ source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.z
 # Autocomplete for zsh
 source <(kubectl completion zsh)
 
-alias k="kubectl"
-alias k=kubecolor
+#alias k="kubectl"
+#alias k=kubecolor
 complete -F __start_kubectl k
 
 source ~/Code/zendesk/kubectl_config/dotfiles/kubectl_stuff.bash

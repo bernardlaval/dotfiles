@@ -1,3 +1,4 @@
+# list of things installed on the laptop
 tap "adoptopenjdk/openjdk"
 tap "caskroom/fonts"
 tap "chef/chef"
